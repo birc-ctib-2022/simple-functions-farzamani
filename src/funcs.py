@@ -1,4 +1,5 @@
 """Exercises with simple functions"""
+from math import sqrt
 
 
 def prod(a, b, c):
@@ -8,8 +9,9 @@ def prod(a, b, c):
     >>> prod(1, 2, 3)
     'TEST ME!'
     """
-    ...
+    return a * b * c
 
+a = 2
 
 def prod2(b):
     """
@@ -18,7 +20,10 @@ def prod2(b):
     >>> prod2(42)
     'TEST ME'
     """
-    ...
+
+    c = a
+
+    return prod(a,b,c)
 
 
 def longest(x, y):
@@ -28,7 +33,12 @@ def longest(x, y):
     >>> longest([1, 2, 3], [4, 5])
     'TEST ME'
     """
-    ...
+    if len(x) > len(y):
+        return x
+    elif len(x) < len(y):
+        return y
+    else:
+        return "Two lists are of the same length"
 
 
 def dist(p1, p2):
@@ -40,4 +50,5 @@ def dist(p1, p2):
     """
     x1, y1 = p1
     x2, y2 = p2
-    ...
+    
+    return sqrt((x2-x1)**2 + (y2-y1)**2)
